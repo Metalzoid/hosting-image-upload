@@ -1,5 +1,8 @@
 <div id="<%= dom_id article %>">
   <div>
+    <%= cl_image_tag(article.photo.key, height: 300, width: 400, crop: :fill ) if article.photo.attached? %>
+  </div>
+  <div>
     <strong>Title:</strong>
     <%= article.title %>
   </div>
